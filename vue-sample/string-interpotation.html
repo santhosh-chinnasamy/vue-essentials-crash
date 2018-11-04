@@ -6,7 +6,10 @@
 
 <body>
     <div id="app">
+        <h1>{{message}}</h1>
         <h1>{{number +20}}</h1>
+        <h2> {{isActive ? 'isActive': 'notactive'}} </h2>
+        <h2> {{message.split('').reverse('').join('')}} </h2>
     </div>
 
     <script>
@@ -14,7 +17,8 @@
             el: '#app',
             data: {
                 message: 'hellosss',
-                number: 1000
+                number: 1000,
+                isActive: true
             }
         })
     </script>
