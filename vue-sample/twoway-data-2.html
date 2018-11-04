@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div id="app">
+            <form action="" class="form-group">
+                <fieldset>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" v-model="options">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="option-1" v-model="options">
+                            option one is this
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="option-2" v-model="options">
+                            option one is that
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="option-3" v-model="options">
+                            option one is disabled
+                        </label>
+                    </div>
+                </fieldset>
+                <p> selected options {{options.join(',')}}</p>
+            </form>
+
+
+        </div>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                options: [],
+                message: ''
+            }
+        })
+    </script>
+
+</body>
+
+</html>
