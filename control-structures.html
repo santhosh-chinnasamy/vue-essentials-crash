@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+<h1 v-if="isActive">{{name}}</h1>
+
+<h1 v-else-if="name ==='Santhosh'">Hey {{name}}</h1>
+<h1 v-else>No User</h1>
+    
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+            message: 'Hello',
+            name: "Santhosh",
+            isActive: false,
+            }
+        })
+    </script>
+
+</body>
+
+</html>
