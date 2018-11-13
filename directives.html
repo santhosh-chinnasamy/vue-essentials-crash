@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <a v-bind:href="url">{{url}}</a>
+
+        <h1 @click="number--">decrease</h1>
+        <h1>{{number}}</h1>
+        <form action="" @submit.prevent="number++">
+            <button type="submit">SUBMIT</button>
+        </form>
+        
+
+    </div>
+
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                url: 'https://bleedbytes.in',
+                number: 0
+            }
+        })
+    </script>
+
+</body>
+
+</html>
