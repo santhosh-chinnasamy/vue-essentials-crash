@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div :style="{color: 'red',fontSize: fontsize +'px'}"> {{message}} </div>
+
+        <div :style="styleObject">{{message}}</div>
+        <div :style="[styleObject, styleObject2]">{{message}}</div>
+
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hellosss',
+                fontsize: 30,
+                styleObject:{
+                    color: 'green',
+                    fontSize: '44px'
+                },
+                styleObject2:{
+                    color: 'blue',
+                    fontSize: '144px'
+                }
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
