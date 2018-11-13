@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <!-- <li v-for="post in posts" :key="post.id">{{post.title}}</li>
+            <li v-for="post in posts" :key="post.id">{{post.body}}</li> -->
+
+            <table class="table">
+                <tr>
+                    <th v-for="post in posts" :key="post.id">{{post.id}}</th>
+                </tr>
+                <tr>
+                    <th v-for="post in posts" :key="post.id">{{post.title}}</th>
+                </tr>
+                <tr>
+                    <td v-for="post in posts" :key="post.id">{{post.body}}</td>
+                </tr>
+            </table>
+        </ul>
+
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                posts: [{
+                        id: 1,
+                        title: 'title 1',
+                        body: 'body 1'
+                    },
+                    {
+                        id: 2,
+                        title: 'title 2',
+                        body: 'body 2'
+                    },
+                    {
+                        id: 3,
+                        title: 'title 3',
+                        body: 'body 3'
+                    },
+                    {
+                        id: 4,
+                        title: 'title 4',
+                        body: 'body 4'
+                    },
+                    {
+                        id: 5,
+                        title: 'title 5',
+                        body: 'body 5'
+                    },
+                ],
+            }
+        })
+    </script>
+
+</body>
+
+</html>
